@@ -7,15 +7,21 @@ export const StyledRow = styled.div`
   margin: 2px;
   border: 1px solid #ccc;
   border-radius: 2px;
-  transition: all .3s;
+  transition: all .4s;
 
-  &:hover {
-    background: #eeeeee;
+  &.unknown {
+    
+     background: #bdbdbd;
+     &:hover {
+        background: #9f9f9f;
+      }
+  }
+  
+  &.marked {
+    background: green;
   }
 
-  &.checked {
-  }
-
-  &.checked {
+  &.blasted {
+    background: red;
   }
 `;
