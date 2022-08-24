@@ -1,7 +1,8 @@
 export type TCell = {
     isOpened: boolean,
-    hasMine: boolean,
+    hasBomb: boolean,
     isMarked: boolean,
+    bombsCount: number,
 }
 
 export type TRow = TCell[];

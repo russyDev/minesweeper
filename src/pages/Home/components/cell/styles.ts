@@ -8,9 +8,9 @@ export const StyledRow = styled.div`
   border: 1px solid #ccc;
   border-radius: 2px;
   transition: all .4s;
+  text-align: center;
 
   &.unknown {
-    
      background: #bdbdbd;
      &:hover {
         background: #9f9f9f;

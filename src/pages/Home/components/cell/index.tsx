@@ -10,9 +10,11 @@ type TProps = {
 }
 
 export const Cell = ({data, onClick, onRightClick} : TProps) => {
-
     return <StyledRow className={classNames({
         unknown: !data.isOpened && !data.isMarked,
         marked: data.isMarked,
-    })} onClick={onClick} onContextMenu={onRightClick}/>;
+    })} onClick={onClick} onContextMenu={onRightClick}>
+        {data.hasBomb && 'b'}
+        {data.isOpened && data.bombsCount > 0 ? data.bombsCount : ''}
+    </StyledRow>;
 }
