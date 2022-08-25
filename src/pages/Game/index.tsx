@@ -47,7 +47,7 @@ export const Game = () => {
                 <div className="buttons">
                     <div className="button" onClick={() => {
                         navigate('/');
-                    }}>Manu</div>
+                    }}>Menu</div>
                     <div className="button" onClick={initGame}>Play again</div>
                 </div>
             </div>
