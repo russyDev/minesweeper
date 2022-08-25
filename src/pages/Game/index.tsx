@@ -1,10 +1,9 @@
 import React from 'react';
 import {Cell} from './components/cell';
 import {Row} from "./components/row";
-import {StyledGameBox} from "./components/styles";
 import {Header} from "./components/header";
 import {useGameState} from "./hooks/useGameState";
-import {StyledResults} from "./styles";
+import {StyledResults, StyledGameBox, StyledWrapper} from "./styles";
 
 export const Game = () => {
 
@@ -57,7 +56,10 @@ export const Game = () => {
 
     return <>
         <Header grid={state}/>
-        {renderGame()}
-        {!gameState.inProgress && renderResult()}
+        <StyledWrapper>
+            {renderGame()}
+            {!gameState.inProgress && renderResult()}
+        </StyledWrapper>
+
     </>
 }

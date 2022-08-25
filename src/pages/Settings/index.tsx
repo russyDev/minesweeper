@@ -35,7 +35,7 @@ export const Settings = () => {
                         <input id="width" type="number" value={state.width} onChange={(e) => {
                             setState({
                                 ...state,
-                                width: Math.min(+e.target.value, 50),
+                                width: Math.min(+e.target.value, 30),
                                 bombsCount: 0
                             })
                         }}/>
@@ -48,7 +48,7 @@ export const Settings = () => {
                         <input id="height" type="number" value={state.height} onChange={(e) => {
                             setState({
                                 ...state,
-                                height:Math.min(+e.target.value, 50),
+                                height:Math.min(+e.target.value, 30),
                                 bombsCount: 0
                             })
                         }}/>

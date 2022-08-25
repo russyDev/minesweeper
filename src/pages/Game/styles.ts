@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+export const StyledWrapper = styled.div`
+  height: calc(100% - 67px);
+  position: relative;
+  overflow: auto;
+`;
+
+export const StyledGameBox = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
 export const StyledResults = styled.div`
   position: fixed;
   top: 0;
