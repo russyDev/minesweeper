@@ -37,7 +37,6 @@ export const useGameState = () => {
                 } as TCell);
             }
         }
-
         const matrixPositions = generateUniqueMatrix(bombCount, height, width);
 
         for(let i = 0; i < bombCount; i++) {
@@ -69,8 +68,8 @@ export const useGameState = () => {
     }, [isInitialized, navigate])
 
     useEffect(() => {
-        return () => initGame()
-    }, [width, height, bombCount, initGame]);
+        initGame()
+    }, []);
 
     const setBombsCount = (data:TGrid, rowIndex: number, cellIndex: number) => {
         if (data[rowIndex] && data[rowIndex][cellIndex]) {
