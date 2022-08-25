@@ -11,7 +11,6 @@ function App() {
             <Route path="/game" element={<Game />} />
             <Route path="/" element={<Settings />} />
           </Routes>
-
     </div>
   );
 }
