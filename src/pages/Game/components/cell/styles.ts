@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledRow = styled.div`
+export const StyledCell = styled.div`
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -9,6 +9,7 @@ export const StyledRow = styled.div`
   border-radius: 2px;
   transition: all .4s;
   text-align: center;
+  display: inline-block;
 
   &.unknown {
      background: #bdbdbd;
@@ -22,6 +23,6 @@ export const StyledRow = styled.div`
   }
 
   &.blasted {
-    background: red;
+    background: red!important;
   }
 `;

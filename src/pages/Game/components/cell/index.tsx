@@ -1,7 +1,7 @@
 import React, {MouseEventHandler} from 'react';
 import classNames from 'classnames'
 import {TCell} from "../../../types";
-import {StyledRow} from "./styles";
+import {StyledCell} from "./styles";
 
 type TProps = {
     data: TCell;
@@ -10,11 +10,11 @@ type TProps = {
 }
 
 export const Cell = ({data, onClick, onRightClick} : TProps) => {
-    return <StyledRow className={classNames({
+    return <StyledCell className={classNames({
         unknown: !data.isOpened && !data.isMarked,
         marked: data.isMarked,
+        blasted: data.hasBomb && data.isOpened,
     })} onClick={onClick} onContextMenu={onRightClick}>
-        {data.hasBomb && 'b'}
-        {data.isOpened && data.bombsCount > 0 ? data.bombsCount : ''}
-    </StyledRow>;
+        {!data.hasBomb && (data.isOpened && data.bombsCount > 0 ? data.bombsCount : '')}
+    </StyledCell>;
 }
